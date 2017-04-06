@@ -1,11 +1,9 @@
 <?php
 	if($_GET["type"] == "post")
 	{
-		print "Post";
-	}
-
-	else if($_GET["type"] == "retrieve")
-	{
-		print "Retrieve";
+		$fn = "test.txt"; 
+		$file = fopen($fn, "a+"); 
+		$size = filesize($fn);
+		fwrite($file, "Client connected!");
 	}
 ?>
