@@ -4,6 +4,6 @@
 		$fn = "test.txt"; 
 		$file = fopen($fn, "a+"); 
 		$size = filesize($fn);
-		fwrite($file, "Client connected!");
+		fwrite($file, "\nClient connected!");
 	}
 ?>
