@@ -15,7 +15,7 @@
     $file_ext = explode('.', $file_name);
     $file_ext = strtolower(end($file_ext));
 
-    $allowed = array('png', 'jpg');
+    $allowed = array('png', 'jpg', 'jpeg');
 
     //filename
     $id = 'uploads/Test';
