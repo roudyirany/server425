@@ -11,12 +11,6 @@
     $file_size = $file['size'];
     $file_error = $file['error'];
 
-    // Work out the file extension
-    $file_ext = explode('.', $file_name);
-    $file_ext = strtolower(end($file_ext));
-
-    $allowed = array('png', 'jpg', 'jpeg');
-
     //filename
     $id = 'uploads/Test';
 
@@ -25,7 +19,6 @@
         mkdir($id, 0777, true);
     }
 
-    if (in_array($file_ext, $allowed)) {
         if ($file_error === 0) {
             echo('file error: '.$file_error);
             if ($file_size <= 20485760) {
@@ -38,7 +31,6 @@
                 }
             }
         }
-    }
 }
 
     ?>
