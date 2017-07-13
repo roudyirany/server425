@@ -31,7 +31,7 @@
                 $file_destination = $id .'/'. $file_name_new;
 
                 if (move_uploaded_file($file_tmp, $file_destination)) {
-                    echo $file_destination;
+                    echo '<body>'.$file_destination.'</body>';
                 }
             }
         }
