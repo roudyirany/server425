@@ -1,8 +1,6 @@
 <?php
     header('Content-type: text/plain; charset=utf-8');
 
-    echo('Hello!');
-
  if (isset($_FILES['file'])) 
  {
     $file = $_FILES['file'];
