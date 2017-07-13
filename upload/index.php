@@ -15,7 +15,7 @@
     $file_ext = explode('.', $file_name);
     $file_ext = strtolower(end($file_ext));
 
-    $allowed = array('png', 'jpg', 'jpeg','gif');
+    $allowed = array('png', 'jpg', 'jpeg');
 
     //filename
     $id = 'uploads/Test';
@@ -26,12 +26,18 @@
     }
 
     if (in_array($file_ext, $allowed)) {
+        if ($file_error === 0) {
+            if ($file_size <= 20485760) {
+
                 $file_name_new = uniqid('', true) . '.' . $file_ext;
                 $file_destination = $id .'/'. $file_name_new;
 
                 if (move_uploaded_file($file_tmp, $file_destination)) {
                     echo $file_destination;
                 }
+            }
+        }
     }
+}
 
     ?>
