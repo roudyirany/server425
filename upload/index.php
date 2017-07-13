@@ -27,8 +27,9 @@
 
     if (in_array($file_ext, $allowed)) {
         if ($file_error === 0) {
+            echo('file error: '.$file_error);
             if ($file_size <= 20485760) {
-
+                echo(' file size: '.$file_size);
                 $file_name_new = uniqid('', true) . '.' . $file_ext;
                 $file_destination = $id .'/'. $file_name_new;
 
