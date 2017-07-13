@@ -1,4 +1,6 @@
 <?php
+    header('Content-type: text/plain; charset=utf-8');
+
  if (isset($_FILES['file'])) 
  {
     $file = $_FILES['file'];
@@ -31,7 +33,7 @@
                 $file_destination = $id .'/'. $file_name_new;
 
                 if (move_uploaded_file($file_tmp, $file_destination)) {
-                    echo '<body>'.$file_destination.'</body>';
+                    echo $file_destination;
                 }
             }
         }
